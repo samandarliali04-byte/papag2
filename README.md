@@ -1,140 +1,18 @@
-
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#292622">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="papağ">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQpxIjUxMiI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9IiMyOTI2MjIiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDYgMTA2KSBzY2FsZSg3LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNkOGNiYjgiIHN0cm9rZS13aWR0aD0iMC43NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik05IDMxIEwxMC41IDE3IEMxMSAxMiAxNCA4IDIwIDggQzI2IDggMjkgMTIgMjkuNSAxNyBMMzEgMzEiLz4KICAgIDxwYXRoIGQ9Ik07IDMxIEgzMyIvPgogICAgPHBhdGggZD0iTTEyIDE0IFExNCAxMS41IDE2IDE0IFExOCAxMS41IDIwIDE0IFEyMiAxMS41IDI0IDE0IFEyNiAxMS41IDI4IDE0Ii8+CiAgICA8cGF0aCBkPSJNMTMgMjAgUTE1IDE3LjUgMTcgMjAgUTE5IDE3LjUgMjEgMjAgUTIzIDE3LjUgMjUgMjAgUTI3IDE3LjUgMjcuNSAyMCIvPgogICAgPHBhdGggZD0iTTExIDI2IFEx... [усечено для читаемости]" type="image/svg+xml">
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQAEl... [усечено для читаемости]">
 <meta name="description" content="papağ — азербайджанская кухня на живом огне: плов, кутабы, пити, мангал и настоящее гостеприимство.">
 <title>papağ — азербайджанский ресторан</title>
 
-<style>
-/* Встроенные шрифты высокой производительности */
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://gstatic.com) format('truetype');
-}
-
-:root {
-  --parchment: #d8cbb8; --linen: #bfb4a3; --stone: #b6ab9c; --walnut: #978e81;
-  --espresso: #615b53; --onyx: #2c2c2c; --roast: #292622; --saffron: #d49653;
-  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --sans: 'Manrope', system-ui, -apple-system, sans-serif;
-  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --pad: 48px;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--sans); font-weight: 500; font-size: 14px; line-height: 1.4; letter-spacing: -0.01em; background: var(--parchment); color: var(--onyx); -webkit-font-smoothing: antialiased; }
-body.lock { overflow: hidden; }
-body.has-cart { padding-bottom: 88px; }
-button, input, textarea, select { font: inherit; color: inherit; letter-spacing: inherit; }
-button { cursor: pointer; background: none; border: 0; }
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 4px; }
-img { max-width: 100%; display: block; }
-ul { list-style: none; }
-.hidden { display: none !important; }
-:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
-.orn * { vector-effect: non-scaling-stroke; }
-.cap { font-size: 12px; line-height: 1.3; letter-spacing: -0.012em; text-transform: uppercase; }
-
-/* ---------- BUTTONS ---------- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 20px 28px; border: 1px solid currentColor; border-radius: 3px; background: transparent; font-size: 14px; line-height: 1; font-weight: 500; letter-spacing: -0.01em; text-transform: uppercase; cursor: pointer; transition: background-color .4s var(--ease), color .4s var(--ease); }
-.btn:hover { text-decoration: none; }
-.btn:disabled { opacity: .5; cursor: not-allowed; }
-.btn-light { color: var(--parchment); }
-.btn-light:hover { background: var(--parchment); color: var(--roast); }
-.btn-dark { color: var(--onyx); }
-.btn-dark:hover { background: var(--onyx); color: var(--parchment); }
-.btn-sm { padding: 14px 20px; min-height: 44px; }
-.btn-block { width: 100%; }
-.icon-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: inherit; border-radius: 3px; }
-.nl { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; line-height: 1; text-transform: uppercase; letter-spacing: -0.01em; color: inherit; }
-
-/* ---------- HERO ---------- */
-.hero { position: relative; overflow: hidden; display: flex; flex-direction: column; min-height: 860px; padding: 0 var(--pad) 48px; background: var(--roast); color: var(--parchment); }
-.hero-slides, .hero-slide { position: absolute; inset: 0; }
-.hero-slide { background-size: cover; background-position: center; opacity: 0; transition: opacity 1s var(--ease); }
-.hero-slide.active { opacity: 1; }
-.hero-content { position: relative; z-index: 2; margin-top: auto; max-width: 600px; }
-.hero-title { font-family: var(--serif); font-size: 64px; font-weight: 300; line-height: 1.1; margin-bottom: 24px; }
-</style>
-</head>
-<body>
-
-<main>
-  <section class="hero">
-    <!-- Слайдер фоновых изображений -->
-    <div class="hero-slides">
-      <!-- Замените URL на реальные пути к фото вашего ресторана или блюд -->
-      <div class="hero-slide active" style="background-image: linear-gradient(to bottom, rgba(41,38,34,0.3), rgba(41,38,34,0.8)), url('hero-bg-1.jpg');"></div>
-      <div class="hero-slide" style="background-image: linear-gradient(to bottom, rgba(41,38,34,0.3), rgba(41,38,34,0.8)), url('hero-bg-2.jpg');"></div>
-      <div class="hero-slide" style="background-image: linear-gradient(to bottom, rgba(41,38,34,0.3), rgba(41,38,34,0.8)), url('hero-bg-3.jpg');"></div>
-    </div>
-
-    <!-- Текстовый контент поверх слайдера -->
-    <div class="hero-content">
-      <h1 class="hero-title">Азербайджанская кухня на живом огне</h1>
-      <a href="#menu" class="btn btn-light">Смотреть меню</a>
-    </div>
-  </section>
-</main>
-
-<script>
-// Автоматическое переключение слайдов
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.hero-slide');
-  if (slides.length <= 1) return;
-  
-  let currentSlide = 0;
-  
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }, 5000); // Смена слайда каждые 5 секунд
-});
-</script>
-
-</body>
-</html>
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#292622">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="papağ">
+<!-- PWA Manifest & Icons -->
+<link rel="manifest" href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22papa%C4%9F%22%2C%22short_name%22%3A%22papa%C4%9F%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23292622%22%2C%22theme_color%22%3A%22%23292622%22%7D">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9IiMyOTI2MjIiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDYgMTA2KSBzY2FsZSg3LjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNkOGNiYjgiIHN0cm9rZS13aWR0aD0iMC43NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik05IDMxIEwxMC41IDE3IEMxMSAxMiAxNCA4IDIwIDggQzI2IDggMjkgMTIgMjkuNSAxNyBMMzEgMzEiLz4KICAgIDxwYXRoIGQ9Ik03IDMxIEgzMyIvPgogICAgPHBhdGggZD0iTTEyIDE0IFExNCAxMS41IDE2IDE0IFExOCAxMS41IDIwIDE0IFEyMiAxMS41IDI0IDE0IFEyNiAxMS41IDI4IDE0Ii8+CiAgICA8cGF0aCBkPSJNMTMgMjAgUTE1IDE3LjUgMTcgMjAgUTE5IDE3LjUgMjEgMjAgUTIzIDE3LjUgMjUgMjAgUTI3IDE3LjUgMjcuNSAyMCIvPgogICAgPHBhdGggZD0iTTExIDI2IFExMyAyMy41IDE1IDI2IFExNyAyMy41IDE5IDI2IFEyMSAyMy41IDIzIDI2IFEyNSAyMy41IDI3IDI2IFEyOSAyMy41IDMwIDI2Ii8+CiAgPC9nPgo8L3N2Zz4K" type="image/svg+xml">
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
-<meta name="description" content="papağ — азербайджанская кухня на живом огне: плов, кутабы, пити, мангал и настоящее гостеприимство.">
-<title>papağ — азербайджанский ресторан</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQAElEQVR4AexdB1gU1xZWAZWylKVERcWOxvjU6HuK0Zho1Ghs2CJ2MWJXBAtdenVBEFAENWisib0kwUYSCyYYNYmJJjZAQNrSFERMeP/ORD6UXSJknZk7e/Odb7xzz517zv3Pv/fO3DNDmnTr0oEKRUApAk0a0f8oAioQoORQAQytbtSIkoOyQCUClBwqoaEKSg7KAZUIUHKohIYqKDkawAFNuYSSQ1Mi3YBxUnI0ADRNuYSSQ1Mi3YBxUnI0ADRNuYSSQ1Mi3YBxUnI0ADRNuYSSQ1Mi3YBxqpUcDbBPLxEwApQcAg4O365RcvAdAQHbp+QQcHD4do2Sg+8ICNg+JYeAg8O3a5QcfEdAwPYpOfgOjoDtU3IIODh8u0bJwXcEBGyfkkPAweHbNUoOviMgYPuUHAIODt+uUXLwHQEB26fkEHBw+HZNuOTgGxlqn34rSzmgGgE6c6jGRuM1lBwaTwHVAFByqMZG4zWUHBpPAdUAUHKoxkbjNZQcoqKAegdDyaFePEXVGyWHqMKp3sFQcqgXT1H1RskhqnCqdzCUHOrFU1S9UXKIKpzqHQwlh3rxFFVvGkIOUcWMs8FQcnAGNXmGKDnIixlnHlNycAY1eYYoOciLGWceU3JwBjV5hig5yIsZZx5TcnAGNXGG6Nvn5IWMO4/pzMEd1sRZouQgLmTcOUzJwR3WxFnSXHI0a6rzpnXHgTZ9x3w4ZMaUcUsdZnqsXgRBAaeohKqbdcemOjrEBVVdDmsWORDp/3S3njZ5TKCX0854WYCXs/NSe/uZkyaOGzF0sE2fXj0gKOAUlVAFejl/lrA+wMvJbuLoHt2tdXS01YU7Ef1oCjkwT0yxHfXp5lAftxWTx4/sZt1JR1s7/UHW5dTrX53+ds8Xx2MTdvuvj4WgsPfACVRClZGZraONCabTlAmjfN1WJG4KmTz+w+bNmhIR2n/vpPjJoa2tPXrE+3GRfnaTRus2b1ZSWno+JTV6y077pa4r1voHR8TFbd+7/9DJU+fOX7n6CwSFfQdPoBKq5Wv80CwmficuKSl5pKurO23y2Nhw35HDBmtraf179AXeg8jJYW4qlQW4zJs12cjQENNA5NzP5yxykW3cduabS4WFxa8SGzQ7nXwJl8xdshaXZ2Y9NDE2dJjzcajfWlOp8av0QG4bMZMDt5MRQW5tW7dKS8+UbdyKaSD5/PdVVVUNi9Zff1Xh8mVr/NBVWkZme6vWEYFuMNGw3oi4SrTkGDtqiJ+7o76+Hu4eHF0DzqdcUUs8wC105egSgG4lEgNfN8dRw99TS88C7ESc5Fgyf8bc6ZO0tLR27DmEu4fXgTu63bH3sLa21vzZUxbPm/46TPDepwjJMWHM8A/eG1BZWRkWGX/o+KnXB/GhY0kw8ezZn8OGvGM7etjrM8RXz2IjB7Yxpk8ZCzQjNyde/P4qCq9VYCIqLhEmZnw87k3rTiiISURFDjNTkzWODk2aNDly8syFlB+5idN3F1OPfXkWRl2cFsABboxyY0Wd5ODG4zqsYOdbX0/311u3E3cfrKOZ2lWf7jpw4+YfEgP9hfZ2au+cxw7FQ463unXp+VbXp08r8aiJnwpMsz0r6jtzpuPP/3d01+6NlZWVnE+xvf/uL377h90v1N8gAAAAAElFTkSuQmCC">
+
+<!-- Preconnect for Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
@@ -150,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);font-weight:500;font-size:14px;line-height:1.4;letter-spacing:-0.01em;background:var(--parchment);color:var(--onyx);-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);font-weight:500;font-size:14px;line-height:1.4;letter-spacing:-0.01em;background:var(--parchment);color:var(--onyx);-webkit-font-smoothing:antialiased;user-select:none}
 body.lock{overflow:hidden}
 body.has-cart{padding-bottom:88px}
 button,input,textarea,select{font:inherit;color:inherit;letter-spacing:inherit}
 button{cursor:pointer;background:none;border:0}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:4px}
-img{max-width:100%;display:block}
+img{max-width:100%;display:block;pointer-events:none}
 ul{list-style:none}
 .hidden{display:none!important}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
@@ -252,7 +130,8 @@ ul{list-style:none}
 .dish-card{display:flex;flex-direction:column;gap:16px;animation:fade .4s var(--ease) both}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 .dish-image{position:relative;display:block;width:100%;aspect-ratio:1/1;background:var(--linen);overflow:hidden;border-radius:0}
-.dish-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.dish-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease), opacity .3s ease;opacity:0}
+.dish-image img.loaded{opacity:1}
 .dish-image:hover img{transform:scale(1.03)}
 .dish-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--walnut)}
 .dish-ph svg{width:38%;height:auto}
@@ -323,7 +202,7 @@ ul{list-style:none}
 .form-grid .field{margin-bottom:0}
 .field.full{grid-column:1/-1}
 .field label{display:block;margin-bottom:8px}
-.fld{display:block;width:100%;height:52px;padding:0 14px;background:transparent;border:1px solid var(--onyx);border-radius:3px;font-size:14px;outline:none}
+.fld{display:block;width:100%;height:52px;padding:0 14px;background:transparent;border:1px solid var(--onyx);border-radius:3px;font-size:14px;outline:none;user-select:text}
 .fld:focus-visible{outline:2px solid var(--onyx);outline-offset:3px}
 textarea.fld{height:auto;min-height:84px;padding:14px;resize:vertical}
 .fld::placeholder{color:var(--espresso);opacity:1}
@@ -488,7 +367,7 @@ body.standalone .site-nav{padding-top:calc(24px + env(safe-area-inset-top))}
 
   <div class="hero-main">
     <div class="hero-meta">
-      <span class="cap">Baki, Azərbaycan</span>
+      <span class="cap">Baku, Azərbaycan</span>
       <span class="cap" data-i18n="meta"></span>
     </div>
     <h1 class="wordmark">papağ</h1>
@@ -555,7 +434,7 @@ body.standalone .site-nav{padding-top:calc(24px + env(safe-area-inset-top))}
     </div>
   </div>
 
-  <div class="dishes-grid" id="dishesList"></div>
+  <div class="dishes-grid" id="dishesList" aria-live="polite"></div>
 </main>
 
 <!-- АТМОСФЕРА -->
@@ -577,7 +456,7 @@ body.standalone .site-nav{padding-top:calc(24px + env(safe-area-inset-top))}
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-lead">
-      <div class="cap">papağ · Baki</div>
+      <div class="cap">papağ · Baku</div>
       <p data-i18n="footer"></p>
     </div>
     <div class="footer-cols">
@@ -596,7 +475,7 @@ body.standalone .site-nav{padding-top:calc(24px + env(safe-area-inset-top))}
   <div class="footer-mark" aria-hidden="true">papağ</div>
   <div class="footer-bottom">
     <span class="cap">© <span id="yearNow"></span> papağ</span>
-    <span class="cap">Baki, Azərbaycan</span>
+    <span class="cap">Baku, Azərbaycan</span>
   </div>
 </footer>
 
@@ -873,7 +752,7 @@ const validWA=()=>/^\d{8,15}$/.test(CONFIG.whatsapp||"");
 const ORN_SVG='<svg class="orn" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="100" cy="100" r="98"/><rect x="40" y="40" width="120" height="120"/><rect x="40" y="40" width="120" height="120" transform="rotate(45 100 100)"/></svg>';
 const STAR_SVG='<svg class="orn" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="5" y="5" width="14" height="14"/><rect x="5" y="5" width="14" height="14" transform="rotate(45 12 12)"/></svg>';
 
-/* ---------- ДАННЫЕ ИЗ SUPABASE ---------- */
+/* ---------- ДАННЫЕ ИЗ SUPABASE & КЕШИРОВАНИЕ ---------- */
 function mapDish(item){
   const img=typeof item.image_url==="string"&&/^https?:\/\//i.test(item.image_url)?item.image_url:null;
   return{
@@ -889,22 +768,53 @@ function mapDish(item){
     }
   };
 }
+
+function loadCachedDishes(){
+  try{
+    const cached=localStorage.getItem("papagDishesCache");
+    if(cached){
+      const parsed=JSON.parse(cached);
+      if(Array.isArray(parsed)&&parsed.length){
+        DISHES=parsed;
+        menuState="ready";
+        applySavedCart();
+        renderCategories();
+        renderMenu();
+        renderMarquee();
+        updateCartUI();
+      }
+    }
+  }catch(e){}
+}
+
 async function fetchDishes(){
-  menuState="loading";
-  renderMenu();
+  loadCachedDishes();
+  if(menuState!=="ready"){
+    menuState="loading";
+    renderMenu();
+  }
+
+  const controller=new AbortController();
+  const timeoutId=setTimeout(()=>controller.abort(),8000); // 8 секунд таймаут
+
   try{
     const response=await fetch(`${SUPABASE_URL}/rest/v1/dishes?select=*`,{
-      headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}
+      headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`},
+      signal:controller.signal
     });
+    clearTimeout(timeoutId);
     if(!response.ok)throw new Error("HTTP "+response.status);
     const data=await response.json();
     if(!Array.isArray(data))throw new Error("Unexpected response");
+    
     DISHES=data.map(mapDish);
+    try{localStorage.setItem("papagDishesCache",JSON.stringify(DISHES));}catch(e){}
+
     applySavedCart();
     menuState="ready";
   }catch(err){
     console.error("Ошибка загрузки меню:",err);
-    menuState="error";
+    if(!DISHES.length)menuState="error";
   }
   renderCategories();
   renderMenu();
@@ -919,7 +829,6 @@ function loadSavedCart(){
     if(raw&&typeof raw==="object"&&!Array.isArray(raw))savedCart=raw;
   }catch(e){savedCart={};}
 }
-// блюда приходят из базы с задержкой, поэтому корзина восстанавливается после загрузки меню
 function applySavedCart(){
   DISHES.forEach(d=>{
     const q=Number(savedCart[d.id]);
@@ -1009,7 +918,7 @@ function refreshControls(id){
 function cardHTML(d){
   const name=esc(dishName(d));
   const desc=dishDesc(d);
-  const media=d.img?`<img src="${esc(d.img)}" alt="" loading="lazy">`:`<span class="dish-ph" aria-hidden="true">${ORN_SVG}</span>`;
+  const media=d.img?`<img src="${esc(d.img)}" alt="" loading="lazy" onload="this.classList.add('loaded')">`:`<span class="dish-ph" aria-hidden="true">${ORN_SVG}</span>`;
   return `
     <article class="dish-card">
       <button class="dish-image" type="button" data-dish="${esc(d.id)}" aria-label="${name}">
@@ -1307,6 +1216,7 @@ function submitOrder(event){
 
   if(btn)btn.disabled=true;
   openWhatsApp(message);
+  clearCart(); // Автоматическая очистка корзины после отправки
   setTimeout(()=>{const b=$("checkoutSubmitBtn");if(b)b.disabled=false;},2000);
 }
 function clearCart(){
@@ -1382,6 +1292,7 @@ function submitReservation(event){
 
   if(btn)btn.disabled=true;
   openWhatsApp(message);
+  closeAll();
   setTimeout(()=>{const b=$("reserveSubmitBtn");if(b)b.disabled=false;},2000);
 }
 function openWhatsApp(message){
@@ -1444,7 +1355,6 @@ document.addEventListener("click",e=>{
     const inCart=!!qty.closest("#cartBody");
     const inModal=!!qty.closest("#infoModal");
     changeQty(id,d);
-    // после перерисовки возвращаем фокус на кнопку того же блока
     const root=inCart?$("cartBody"):[...document.querySelectorAll("[data-ctrl]")]
       .find(el=>el.dataset.ctrl===id&&!!el.closest("#infoModal")===inModal);
     if(root){
@@ -1523,7 +1433,7 @@ async function installApp(){
     try{await promptEvent.userChoice;}catch(e){}
     return;
   }
-  openPage("install"); // iOS: показываем инструкцию
+  openPage("install");
 }
 
 /* ---------- ЗАПУСК ---------- */
